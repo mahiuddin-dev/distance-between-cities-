@@ -48,6 +48,8 @@ def distance_city(input1,input2):
                 for i in range(data):
                     distance2 = distance2 + distance[i] 
                     distance2path.append(i)
+                # Revarse list
+                distance2path.reverse()
 
             for i in range(totalcity,index2-1,-1):
                 distance2 = distance2 + distance[i]
