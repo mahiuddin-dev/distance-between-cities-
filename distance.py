@@ -51,12 +51,12 @@ def distance_city(input1,input2):
                
             # check distance 1 and distance 2 and print the shortest path    
             if distance1 < distance2:
-                print("Distance is",distance1,"km")
+                print(" Shortest Distance is",distance1,"km")
                 for i in distance1path:
                     print(city[i])
       
             else:
-                print("Distance is",distance2,"km")
+                print("Shortest Distance is",distance2,"km")
                 for i in distance2path:
                     print(city[i])
 
