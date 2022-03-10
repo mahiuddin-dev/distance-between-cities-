@@ -6,10 +6,14 @@ city = ['Rabat','Sueca','Rudow','Mosu','Plessis Trevise','Kang Dong','Nezahualc√
 distance = [1063,2656,1352,1841,61,1634,151,285,146,11,380,2547,2524,97,6999,63,105,244,502,30]
 
 
-input1 = input("Enter the city name 1 : ").title()
-input2 = input("Enter the city name 2 : ").title()
+# input1 = input("Enter the city name 1 : ").title()
+# input2 = input("Enter the city name 2 : ").title()
+
+# set in python
+city_set = ['Rabat','Sueca','Rudow','Mosu','Hamburg']
 
 totalcity = len(city)-1
+
 
 # distance city and distance
 def distance_city(input1,input2):
@@ -49,14 +53,14 @@ def distance_city(input1,input2):
                 distance2 = distance2 + distance[i]
                 distance2path.append(i)
                
-            # check distance 1 and distance 2 and print the shortest path    
+            # check distance 1 and distance 2 and print the shortest path between two city
             if distance1 < distance2:
-                print(" Shortest Distance is",distance1,"km")
+                print(f"Shortest Distance is between {input1} and {input2}",distance1,"km")
                 for i in distance1path:
                     print(city[i])
       
             else:
-                print("Shortest Distance is",distance2,"km")
+                print(f"Shortest Distance is between {input1} and {input2}",distance2,"km")
                 for i in distance2path:
                     print(city[i])
 
@@ -64,5 +68,12 @@ def distance_city(input1,input2):
         print("Invalid input")
 
 # Print the shortest path function 
-distance_city(input1,input2)
+# distance_city(input1,input2)
 
+def PrintCitySet():
+    for i in range(len(city_set)):
+        for j in range(len(city_set)):
+            if i != j:
+                distance_city(city_set[i],city_set[j])
+
+PrintCitySet()
