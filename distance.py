@@ -44,16 +44,19 @@ def distance_city(input1,input2):
             distance2path = []
 
             if index1_data > 0:
-                data = index1_data
-                for i in range(data):
+                for i in range(index1_data):
                     distance2 = distance2 + distance[i] 
                     distance2path.append(i)
+                    if distance2 > distance1:
+                        break
                 # Revarse list
                 distance2path.reverse()
 
             for i in range(totalcity,index2-1,-1):
                 distance2 = distance2 + distance[i]
                 distance2path.append(i)
+                if distance2 > distance1:
+                        break
                
             # check distance 1 and distance 2 and print the shortest path between two city
             if distance1 < distance2:
